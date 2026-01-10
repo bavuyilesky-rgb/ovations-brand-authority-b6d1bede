@@ -84,10 +84,21 @@
 
 @layer components {
   .text-gradient-gold {
-    background: var(--gradient-gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    /* Safe fallback: always show gold text even if gradient-clip isn't supported */
+    color: hsl(var(--primary));
+  }
+
+  @supports (-webkit-background-clip: text) {
+    .text-gradient-gold {
+      display: inline-block;
+      background-image: var(--gradient-gold);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
   }
 
   .glow-gold {
