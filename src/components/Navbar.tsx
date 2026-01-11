@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getPhoneLink } from "@/lib/contact";
+import GetQuoteModal from "@/components/GetQuoteModal";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +59,7 @@ const Navbar = () => {
 
             {/* CTA */}
             <div className="hidden md:block">
-              <Button variant="gold" size="default">
+              <Button variant="gold" size="default" onClick={() => setIsQuoteModalOpen(true)}>
                 <Phone className="w-4 h-4" />
                 Get Quote
               </Button>
@@ -99,10 +102,23 @@ const Navbar = () => {
                     {link.label}
                   </a>
                 ))}
-                <div className="pt-6 border-t border-border">
-                  <Button variant="hero" size="xl" className="w-full">
-                    <Phone className="w-5 h-5" />
-                    Call Now
+                <div className="pt-6 border-t border-border space-y-3">
+                  <Button variant="hero" size="xl" className="w-full" asChild>
+                    <a href={getPhoneLink()}>
+                      <Phone className="w-5 h-5" />
+                      Call Now
+                    </a>
+                  </Button>
+                  <Button 
+                    variant="goldOutline" 
+                    size="xl" 
+                    className="w-full"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsQuoteModalOpen(true);
+                    }}
+                  >
+                    Get Quote
                   </Button>
                 </div>
               </div>
@@ -110,6 +126,9 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Quote Modal */}
+      <GetQuoteModal open={isQuoteModalOpen} onOpenChange={setIsQuoteModalOpen} />
     </>
   );
 };

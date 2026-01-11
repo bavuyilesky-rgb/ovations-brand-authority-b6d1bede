@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getPhoneLink, getWhatsAppLink } from "@/lib/contact";
 
 const CTA = () => {
   return (
@@ -39,14 +40,18 @@ const CTA = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="xl" className="group w-full sm:w-auto">
-              <Phone className="w-5 h-5" />
-              Call Now
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
+              <a href={getPhoneLink()}>
+                <Phone className="w-5 h-5" />
+                Call Now
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button variant="goldOutline" size="xl" className="group w-full sm:w-auto">
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp Us
+            <Button variant="goldOutline" size="xl" className="group w-full sm:w-auto" asChild>
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp Us
+              </a>
             </Button>
           </div>
 

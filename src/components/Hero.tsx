@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-signage.jpg";
+import { getPhoneLink, getWhatsAppLink } from "@/lib/contact";
 
 const Hero = () => {
   return (
@@ -68,14 +69,18 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button variant="hero" size="xl" className="group">
-              <Phone className="w-5 h-5" />
-              Call Now
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Button variant="hero" size="xl" className="group" asChild>
+              <a href={getPhoneLink()}>
+                <Phone className="w-5 h-5" />
+                Call Now
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="xl" className="group">
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp Us
+            <Button variant="heroOutline" size="xl" className="group" asChild>
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp Us
+              </a>
             </Button>
           </motion.div>
 
