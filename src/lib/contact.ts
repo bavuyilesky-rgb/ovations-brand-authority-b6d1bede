@@ -1,8 +1,7 @@
 // Contact information for Ovations
-// Replace these with actual contact details
-
-export const PHONE_NUMBER = "+27123456789"; // Replace with actual phone number
-export const WHATSAPP_NUMBER = "27123456789"; // WhatsApp format (no + or spaces)
+export const PHONE_NUMBER = "+27637941194";
+export const PHONE_DISPLAY = "063 794 1194";
+export const WHATSAPP_NUMBER = "27637941194"; // WhatsApp format (no + or spaces)
 
 export const getPhoneLink = () => `tel:${PHONE_NUMBER}`;
 

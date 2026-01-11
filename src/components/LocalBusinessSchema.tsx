@@ -10,7 +10,7 @@ const LocalBusinessSchema = () => {
     description:
       "Premium branding and signage company in Mthatha, South Africa. Specializing in business branding, professional signage, visual identity, and custom print solutions.",
     url: "https://ovations.co.za",
-    telephone: "+27123456789",
+    telephone: "+27637941194",
     email: "info@ovations.co.za",
     address: {
       "@type": "PostalAddress",

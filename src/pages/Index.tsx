@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import WhyOvations from "@/components/WhyOvations";
 import Services from "@/components/Services";
 import Showcase from "@/components/Showcase";
-import SocialProof from "@/components/SocialProof";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import Process from "@/components/Process";
 import LocationMap from "@/components/LocationMap";
 import CTA from "@/components/CTA";
@@ -24,7 +24,7 @@ const Index = () => {
       </section>
       <Showcase />
       <section id="reviews">
-        <SocialProof />
+        <TestimonialsCarousel />
       </section>
       <section id="process">
         <Process />
