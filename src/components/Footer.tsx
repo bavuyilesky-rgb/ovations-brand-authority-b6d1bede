@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
+import { getPhoneLink, PHONE_DISPLAY } from "@/lib/contact";
 
 const Footer = () => {
   return (
@@ -45,7 +46,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-ivory-muted text-sm">Call or WhatsApp</span>
+                <a 
+                  href={getPhoneLink()} 
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors"
+                >
+                  {PHONE_DISPLAY}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-primary shrink-0" />
