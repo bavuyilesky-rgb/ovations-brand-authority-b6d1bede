@@ -19,10 +19,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Why Us", href: "#why" },
-    { label: "Services", href: "#services" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Process", href: "#process" },
+    { label: "Why Us", href: "/#why" },
+    { label: "Services", href: "/#services" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "Process", href: "/#process" },
   ];
 
   return (
