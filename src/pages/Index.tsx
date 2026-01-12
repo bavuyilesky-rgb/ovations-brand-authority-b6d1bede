@@ -5,10 +5,12 @@ import Services from "@/components/Services";
 import Showcase from "@/components/Showcase";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import Process from "@/components/Process";
+import FAQ from "@/components/FAQ";
 import LocationMap from "@/components/LocationMap";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -29,9 +31,11 @@ const Index = () => {
       <section id="process">
         <Process />
       </section>
+      <FAQ />
       <LocationMap />
       <CTA />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };
