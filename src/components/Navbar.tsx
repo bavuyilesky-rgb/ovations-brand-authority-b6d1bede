@@ -4,6 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPhoneLink } from "@/lib/contact";
 import GetQuoteModal from "@/components/GetQuoteModal";
+import logo from "@/assets/logo.jpeg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,8 +42,8 @@ const Navbar = () => {
         <div className="container px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#" className="font-display text-2xl font-bold text-gradient-gold">
-              OVATIONS
+            <a href="/" className="flex items-center">
+              <img src={logo} alt="Ovations Logo" className="h-12 w-auto" />
             </a>
 
             {/* Desktop navigation */}

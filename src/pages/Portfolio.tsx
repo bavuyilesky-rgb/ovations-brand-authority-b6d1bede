@@ -10,6 +10,7 @@ import CTA from "@/components/CTA";
 import serviceSignage from "@/assets/service-signage.jpg";
 import serviceBranding from "@/assets/service-branding.jpg";
 import servicePrints from "@/assets/service-prints.jpg";
+import photographyStudio from "@/assets/photography-studio.jpeg";
 
 type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion";
 
@@ -161,7 +162,7 @@ const projects: Project[] = [
     category: "photography",
     client: "Corporate Headshots",
     description: "Professional indoor studio photography for corporate headshots, family portraits, and personal branding.",
-    image: serviceBranding,
+    image: photographyStudio,
     results: ["Professional lighting", "Multiple poses", "Quick delivery"],
   },
   {
