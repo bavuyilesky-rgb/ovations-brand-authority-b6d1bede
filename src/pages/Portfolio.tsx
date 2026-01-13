@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Palette, PenTool, Building2, Printer, Camera, Shirt } from "lucide-react";
+import { ArrowLeft, Palette, PenTool, Building2, Printer, Camera, Shirt, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -12,7 +12,7 @@ import serviceBranding from "@/assets/service-branding.jpg";
 import servicePrints from "@/assets/service-prints.jpg";
 import photographyStudio from "@/assets/photography-studio.jpeg";
 
-type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion";
+type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion" | "software";
 
 interface Project {
   id: string;
@@ -193,6 +193,43 @@ const projects: Project[] = [
     image: serviceBranding,
     results: ["Brand consistency", "Comfortable wear", "Professional look"],
   },
+  // Software Development
+  {
+    id: "19",
+    title: "Business Management System",
+    category: "software",
+    client: "Mthatha Enterprises",
+    description: "Custom web application for inventory management, sales tracking, and employee management with real-time analytics.",
+    image: serviceBranding,
+    results: ["50% efficiency increase", "Real-time reporting", "Mobile accessible"],
+  },
+  {
+    id: "20",
+    title: "E-Commerce Platform",
+    category: "software",
+    client: "Local Retail Store",
+    description: "Full-featured online store with payment integration, order management, and delivery tracking for local businesses.",
+    image: servicePrints,
+    results: ["Online sales enabled", "Secure payments", "Customer growth"],
+  },
+  {
+    id: "21",
+    title: "Booking & Appointment System",
+    category: "software",
+    client: "Beauty Salon",
+    description: "Online booking platform with calendar management, SMS reminders, and customer database for service businesses.",
+    image: serviceSignage,
+    results: ["Automated bookings", "Reduced no-shows", "Client management"],
+  },
+  {
+    id: "22",
+    title: "School Management Portal",
+    category: "software",
+    client: "Private School",
+    description: "Comprehensive school management system with student records, grade tracking, parent portal, and fee management.",
+    image: serviceBranding,
+    results: ["Streamlined admin", "Parent engagement", "Digital records"],
+  },
 ];
 
 const categories = [
@@ -203,6 +240,7 @@ const categories = [
   { id: "printing" as Category, label: "Printing", icon: Printer },
   { id: "photography" as Category, label: "Photography", icon: Camera },
   { id: "fashion" as Category, label: "Fashion", icon: Shirt },
+  { id: "software" as Category, label: "Software", icon: Code },
 ];
 
 const Portfolio = () => {
@@ -301,6 +339,11 @@ const Portfolio = () => {
               {activeCategory === "fashion" && (
                 <p className="text-ivory-muted max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Fashion:</span> Custom school ties, corporate uniforms, branded apparel, and fashion accessories for organizations and businesses.
+                </p>
+              )}
+              {activeCategory === "software" && (
+                <p className="text-ivory-muted max-w-3xl mx-auto">
+                  <span className="text-primary font-semibold">Software Development:</span> Custom web applications, e-commerce platforms, booking systems, school management portals, business management systems, and mobile-responsive solutions.
                 </p>
               )}
             </motion.div>
