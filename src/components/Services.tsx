@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Building2, Palette, PenTool, Layers, Code } from "lucide-react";
+import { Sparkles, Building2, Palette, PenTool, Layers, Code, Camera, Shirt, Printer } from "lucide-react";
 
 const services = [
   {
@@ -37,6 +37,24 @@ const services = [
     title: "Software Development",
     result: "Digitize your business",
     description: "Custom web applications, e-commerce platforms, booking systems, and business management solutions. Mobile-responsive apps that grow with your business.",
+  },
+  {
+    icon: Camera,
+    title: "Photography",
+    result: "Capture your moments",
+    description: "Professional indoor studio and outdoor photography. Weddings, birthdays, umgidi, funerals, baby showers, bridal showers, corporate events and all celebrations.",
+  },
+  {
+    icon: Shirt,
+    title: "Fashion & Apparel",
+    result: "Dress your brand",
+    description: "Custom school ties, corporate uniforms, branded t-shirts, and fashion accessories. Quality apparel that represents your organization with style.",
+  },
+  {
+    icon: Printer,
+    title: "UV DTF Printing",
+    result: "Print on any surface",
+    description: "High-resolution UV DTF printing up to 2880x1440 dpi for ceramics, phone covers, round objects, PVC, wood, metal, acrylic and more. Vibrant, durable designs.",
   },
 ];
 
