@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Building2, Palette, PenTool, Layers } from "lucide-react";
+import { Sparkles, Building2, Palette, PenTool, Layers, Code } from "lucide-react";
 
 const services = [
   {
@@ -31,6 +31,12 @@ const services = [
     title: "End-to-End Solutions",
     result: "One partner, complete peace of mind",
     description: "From concept to installation, we handle everything. Design, production, and installation — delivered on time, every time.",
+  },
+  {
+    icon: Code,
+    title: "Software Development",
+    result: "Digitize your business",
+    description: "Custom web applications, e-commerce platforms, booking systems, and business management solutions. Mobile-responsive apps that grow with your business.",
   },
 ];
 
