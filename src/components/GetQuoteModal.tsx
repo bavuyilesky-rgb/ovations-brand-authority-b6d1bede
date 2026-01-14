@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { X, Send, CheckCircle } from "lucide-react";
+import { Send, MessageCircle } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -20,6 +20,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { WHATSAPP_NUMBER } from "@/lib/contact";
 
 interface GetQuoteModalProps {
   open: boolean;
@@ -37,6 +38,28 @@ const GetQuoteModal = ({ open, onOpenChange }: GetQuoteModalProps) => {
     notes: "",
   });
 
+  const getServiceLabel = (value: string) => {
+    const services: Record<string, string> = {
+      signage: "Business Signage",
+      branding: "Brand Identity",
+      vehicle: "Vehicle Branding",
+      prints: "Print Materials",
+      other: "Other / Multiple Services",
+    };
+    return services[value] || value;
+  };
+
+  const getBudgetLabel = (value: string) => {
+    const budgets: Record<string, string> = {
+      "under-5k": "Under R5,000",
+      "5k-15k": "R5,000 - R15,000",
+      "15k-30k": "R15,000 - R30,000",
+      "30k-plus": "R30,000+",
+      "not-sure": "Not Sure Yet",
+    };
+    return budgets[value] || "Not specified";
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -52,8 +75,21 @@ const GetQuoteModal = ({ open, onOpenChange }: GetQuoteModalProps) => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Build WhatsApp message
+    const message = `🎯 *New Quote Request*
+
+👤 *Name:* ${formData.name.trim()}
+🏢 *Business:* ${formData.business.trim()}
+🛠️ *Service:* ${getServiceLabel(formData.service)}
+💰 *Budget:* ${getBudgetLabel(formData.budget)}
+${formData.notes.trim() ? `📝 *Details:* ${formData.notes.trim()}` : ""}
+
+_Sent via Ovations Website_`;
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, "_blank");
     
     setIsSubmitting(false);
     onOpenChange(false);
@@ -68,8 +104,8 @@ const GetQuoteModal = ({ open, onOpenChange }: GetQuoteModalProps) => {
     });
 
     toast({
-      title: "Quote Request Sent! ✓",
-      description: "We'll get back to you within 24 hours. Thank you for choosing Ovations!",
+      title: "Opening WhatsApp... ✓",
+      description: "Complete your quote request by sending the message in WhatsApp.",
     });
   };
 
@@ -194,8 +230,8 @@ const GetQuoteModal = ({ open, onOpenChange }: GetQuoteModalProps) => {
               </>
             ) : (
               <>
-                <Send className="w-5 h-5" />
-                Send Quote Request
+                <MessageCircle className="w-5 h-5" />
+                Send via WhatsApp
               </>
             )}
           </Button>
