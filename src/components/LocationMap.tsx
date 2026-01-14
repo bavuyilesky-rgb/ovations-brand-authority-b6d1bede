@@ -9,7 +9,10 @@ const LocationMap = () => {
     lng: 28.7844,
   };
 
-  const googleMapsUrl = `https://maps.google.com/maps?q=LCM+Ludidi+Building,+3+Chatham+St,+CBD,+Mthatha,+5099`;
+  const address = "LCM Ludidi Building, 3 Chatham St, CBD, Mthatha, 5099";
+
+  // Use the Directions endpoint (more reliable than search links)
+  const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
   return (
     <section className="py-20 bg-charcoal-light relative overflow-hidden">
@@ -48,7 +51,7 @@ const LocationMap = () => {
           {/* Google Maps Embed */}
           <div className="aspect-[16/9] md:aspect-[21/9] w-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54234.86671772099!2d28.744!3d-31.589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e636e6f2e8af4c1%3A0x4a6c4e9cf0e8a2c9!2sMthatha%2C%20Eastern%20Cape%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+              src={"https://www.google.com/maps?q=" + encodeURIComponent(address) + "&output=embed"}
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(90%)" }}
