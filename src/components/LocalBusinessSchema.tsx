@@ -14,7 +14,7 @@ const LocalBusinessSchema = () => {
     email: "info@ovations.co.za",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Mthatha CBD",
+      streetAddress: "LCM Ludidi Building, 3 Chatham St, CBD",
       addressLocality: "Mthatha",
       addressRegion: "Eastern Cape",
       postalCode: "5099",

@@ -64,8 +64,8 @@ const LocationMap = () => {
             <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl p-6 shadow-xl">
               <h3 className="font-display font-bold text-lg mb-2">Ovations Studio</h3>
               <p className="text-ivory-muted text-sm mb-4">
-                Mthatha, Eastern Cape<br />
-                South Africa
+                LCM Ludidi Building, 3 Chatham St<br />
+                CBD, Mthatha, 5099
               </p>
               <Button variant="gold" size="sm" asChild>
                 <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">

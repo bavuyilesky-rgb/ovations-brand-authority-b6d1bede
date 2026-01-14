@@ -41,7 +41,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <span className="text-ivory-muted text-sm">
-                  Mthatha, Eastern Cape<br />South Africa
+                  LCM Ludidi Building, 3 Chatham St<br />CBD, Mthatha, 5099
                 </span>
               </li>
               <li className="flex items-center gap-3">

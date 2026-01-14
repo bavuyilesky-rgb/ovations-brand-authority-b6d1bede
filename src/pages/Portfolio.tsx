@@ -12,6 +12,17 @@ import serviceBranding from "@/assets/service-branding.jpg";
 import servicePrints from "@/assets/service-prints.jpg";
 import photographyStudio from "@/assets/photography-studio.jpeg";
 
+// Portfolio images
+import canvasPortrait from "@/assets/portfolio-canvas-portrait.png";
+import certificate from "@/assets/portfolio-certificate.png";
+import uniform from "@/assets/portfolio-uniform.png";
+import officeSignage from "@/assets/portfolio-office-signage.png";
+import bannerFestival from "@/assets/portfolio-banner-festival.png";
+import pullupBanner from "@/assets/portfolio-pullup-banner.png";
+import trophy from "@/assets/portfolio-trophy.png";
+import tshirts from "@/assets/portfolio-tshirts.png";
+import candles from "@/assets/portfolio-candles.avif";
+
 type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion" | "software";
 
 interface Project {
@@ -32,7 +43,7 @@ const projects: Project[] = [
     category: "branding",
     client: "Mthatha Events Co.",
     description: "Personalized candle branding for events including logos, names, and custom fragrances for weddings and corporate functions.",
-    image: serviceBranding,
+    image: candles,
     results: ["Unique event gifts", "Brand memorable moments", "Premium quality finish"],
   },
   {
@@ -41,7 +52,7 @@ const projects: Project[] = [
     category: "branding",
     client: "Swift Logistics Mthatha",
     description: "Full team uniform branding including t-shirts, caps, and name tags for a professional fleet appearance.",
-    image: serviceBranding,
+    image: tshirts,
     results: ["Team unity improved", "Professional image", "Durable prints"],
   },
   {
@@ -50,7 +61,7 @@ const projects: Project[] = [
     category: "branding",
     client: "Eastern Cape Sports Awards",
     description: "Custom crystal trophies with laser engraving for annual sports awards ceremony.",
-    image: serviceBranding,
+    image: trophy,
     results: ["Prestigious awards", "Custom engraving", "Lasting memories"],
   },
   {
@@ -59,7 +70,7 @@ const projects: Project[] = [
     category: "branding",
     client: "Mthatha Business Expo",
     description: "Complete exhibition package with pull-up banners, X-banners, and backdrop banners for trade show presence.",
-    image: serviceBranding,
+    image: pullupBanner,
     results: ["Stand out at events", "Easy setup", "High-impact visuals"],
   },
   // Designs
@@ -78,7 +89,7 @@ const projects: Project[] = [
     category: "designs",
     client: "Mthatha Training Institute",
     description: "Professional certificate templates with gold foil accents and security features for training programs.",
-    image: servicePrints,
+    image: certificate,
     results: ["Professional recognition", "Tamper-proof design", "Brand consistency"],
   },
   {
@@ -97,7 +108,7 @@ const projects: Project[] = [
     category: "signage",
     client: "Eastern Cape Legal Associates",
     description: "Premium indoor and outdoor signage installation including illuminated entrance signs and wayfinding.",
-    image: serviceSignage,
+    image: officeSignage,
     results: ["Professional presence", "24/7 visibility", "Client navigation improved"],
   },
   {
@@ -125,7 +136,7 @@ const projects: Project[] = [
     category: "printing",
     client: "Mthatha Festival",
     description: "High-quality large format banners, posters, and stickers for annual cultural festival.",
-    image: servicePrints,
+    image: bannerFestival,
     results: ["Vibrant colors", "Weather durable", "Quick turnaround"],
   },
   {
@@ -134,7 +145,7 @@ const projects: Project[] = [
     category: "printing",
     client: "Art Gallery Mthatha",
     description: "Gallery-quality canvas prints with museum-grade materials for art exhibitions.",
-    image: servicePrints,
+    image: canvasPortrait,
     results: ["Archival quality", "True color reproduction", "Professional mounting"],
   },
   {
@@ -190,7 +201,7 @@ const projects: Project[] = [
     category: "fashion",
     client: "Retail Chain",
     description: "Complete uniform solution including shirts, name tags, and accessories for retail staff.",
-    image: serviceBranding,
+    image: uniform,
     results: ["Brand consistency", "Comfortable wear", "Professional look"],
   },
   // Software Development
