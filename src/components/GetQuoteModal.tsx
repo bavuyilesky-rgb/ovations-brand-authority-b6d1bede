@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -20,7 +20,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { WHATSAPP_NUMBER } from "@/lib/contact";
+import { getWhatsAppLink } from "@/lib/contact";
 
 interface GetQuoteModalProps {
   open: boolean;
@@ -60,9 +60,9 @@ const GetQuoteModal = ({ open, onOpenChange }: GetQuoteModalProps) => {
     return budgets[value] || "Not specified";
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name.trim() || !formData.business.trim() || !formData.service) {
       toast({
@@ -74,7 +74,7 @@ const GetQuoteModal = ({ open, onOpenChange }: GetQuoteModalProps) => {
     }
 
     setIsSubmitting(true);
-    
+
     // Build WhatsApp message
     const message = `🎯 *New Quote Request*
 
@@ -86,14 +86,19 @@ ${formData.notes.trim() ? `📝 *Details:* ${formData.notes.trim()}` : ""}
 
 _Sent via Ovations Website_`;
 
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp
-    window.open(whatsappUrl, "_blank");
-    
+    const whatsappUrl = getWhatsAppLink(message);
+
+    // Try opening a new tab; if blocked, fall back to same-tab navigation.
+    const opened = window.open(whatsappUrl, "_blank");
+    if (opened) {
+      opened.opener = null;
+    } else {
+      window.location.href = whatsappUrl;
+    }
+
     setIsSubmitting(false);
     onOpenChange(false);
-    
+
     // Reset form
     setFormData({
       name: "",
