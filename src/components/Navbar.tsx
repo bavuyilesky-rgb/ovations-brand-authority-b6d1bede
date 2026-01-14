@@ -4,7 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPhoneLink } from "@/lib/contact";
 import GetQuoteModal from "@/components/GetQuoteModal";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-main.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
