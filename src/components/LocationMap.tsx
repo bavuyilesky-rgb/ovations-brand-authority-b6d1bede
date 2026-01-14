@@ -9,7 +9,7 @@ const LocationMap = () => {
     lng: 28.7844,
   };
 
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${mthatha.lat},${mthatha.lng}&query_place_id=Mthatha,+Eastern+Cape,+South+Africa`;
+  const googleMapsUrl = `https://maps.google.com/maps?q=LCM+Ludidi+Building,+3+Chatham+St,+CBD,+Mthatha,+5099`;
 
   return (
     <section className="py-20 bg-charcoal-light relative overflow-hidden">
