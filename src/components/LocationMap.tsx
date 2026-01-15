@@ -9,7 +9,7 @@ const LocationMap = () => {
     lng: 28.7844,
   };
 
-  const address = "LCM Ludidi Building, 3 Chatham St, CBD, Mthatha, 5099";
+  const address = "LCM Ludidi Building, 3 Chatham St, CBD, Shop no.8 Mthatha, 5099";
 
   // Use the Directions endpoint (more reliable than search links)
   const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -68,7 +68,7 @@ const LocationMap = () => {
               <h3 className="font-display font-bold text-lg mb-2">Ovations Studio</h3>
               <p className="text-ivory-muted text-sm mb-4">
                 LCM Ludidi Building, 3 Chatham St<br />
-                CBD, Mthatha, 5099
+                CBD, Shop no.8 Mthatha, 5099
               </p>
               <Button variant="gold" size="sm" asChild>
                 <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">

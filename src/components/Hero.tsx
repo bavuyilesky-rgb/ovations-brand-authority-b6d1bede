@@ -27,7 +27,7 @@ const Hero = () => {
         }}
       />
 
-      {/* Gold accent glow */}
+      {/* Magenta accent glow */}
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px]" />
 
       <div className="container relative z-10 px-6 py-20 md:py-32">
@@ -46,7 +46,7 @@ const Hero = () => {
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-ivory-muted font-medium tracking-wide">
-              Mthatha's Most Trusted Branding Partner
+              Your One Stop Shop For All Your Designs And Branding Needs
             </span>
           </motion.div>
 
@@ -59,7 +59,7 @@ const Hero = () => {
           {/* Sub-headline */}
           <p className="text-lg md:text-xl text-ivory-muted max-w-2xl mx-auto mb-10 leading-relaxed">
             Premium branding and signage that transforms businesses into landmarks. 
-            Rated 4.3★ — the name behind Mthatha's most recognizable brands.
+            Rated 4.3★ — the name behind South Africa's most recognizable brands.
           </p>
 
           {/* CTA buttons */}
@@ -100,12 +100,12 @@ const Hero = () => {
                 <p className="text-sm text-muted-foreground mt-1">Customer Rating</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-display font-bold text-foreground">"Best in Mthatha"</p>
+                <p className="text-2xl md:text-3xl font-display font-bold text-foreground">"Best in SA"</p>
                 <p className="text-sm text-muted-foreground mt-1">Client Review</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-display font-bold text-foreground">24/7</p>
-                <p className="text-sm text-muted-foreground mt-1">Available</p>
+                <p className="text-2xl md:text-3xl font-display font-bold text-foreground">Mon-Sat</p>
+                <p className="text-sm text-muted-foreground mt-1">8am - 5pm</p>
               </div>
             </div>
           </motion.div>

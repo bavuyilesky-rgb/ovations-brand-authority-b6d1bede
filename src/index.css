@@ -46,22 +46,22 @@
 
     --radius: 0.375rem;
 
-    /* Custom luxury tokens */
-    --gold: 43 74% 49%;
-    --gold-light: 43 74% 65%;
-    --gold-dark: 43 74% 35%;
+    /* Custom luxury tokens - Magenta accent */
+    --gold: 330 100% 50%;
+    --gold-light: 330 100% 65%;
+    --gold-dark: 330 100% 40%;
     --charcoal: 0 0% 10%;
     --charcoal-light: 0 0% 15%;
     --ivory: 45 10% 95%;
     --ivory-muted: 45 5% 70%;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 74% 65%));
+    --gradient-gold: linear-gradient(135deg, hsl(330 100% 50%), hsl(330 100% 65%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 8%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 8%), hsl(0 0% 5%));
 
     /* Shadows */
-    --shadow-gold: 0 4px 30px -5px hsl(43 74% 49% / 0.25);
+    --shadow-gold: 0 4px 30px -5px hsl(330 100% 50% / 0.25);
     --shadow-soft: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
     --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
 

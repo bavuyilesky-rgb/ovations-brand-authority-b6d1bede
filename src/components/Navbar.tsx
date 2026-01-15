@@ -3,13 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPhoneLink } from "@/lib/contact";
-import GetQuoteModal from "@/components/GetQuoteModal";
 import logo from "@/assets/logo-main.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Why Us", href: "/#why" },
+    { label: "About Us", href: "/#why" },
     { label: "Services", href: "/#services" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Reviews", href: "/#reviews" },
@@ -28,59 +26,59 @@ const Navbar = () => {
   ];
 
   return (
-    <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/90 backdrop-blur-lg border-b border-border"
-            : "bg-transparent"
-        }`}
-      >
-        <div className="container px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <a href="/" className="flex items-center">
-              <img src={logo} alt="Ovations Logo" className="h-12 w-auto" />
-            </a>
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/90 backdrop-blur-lg border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container px-6">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="Ovations Logo" className="h-12 w-auto" />
+          </a>
 
-            {/* Desktop navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-ivory-muted hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="hidden md:block">
-              <Button variant="gold" size="default" onClick={() => setIsQuoteModalOpen(true)}>
-                <Phone className="w-4 h-4" />
-                Get Quote
-              </Button>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden p-2 text-foreground"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-ivory-muted hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
+
+          {/* CTA */}
+          <div className="hidden md:block">
+            <Button variant="gold" size="default" asChild>
+              <a href={getPhoneLink()}>
+                <Phone className="w-4 h-4" />
+                Call Now
+              </a>
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2 text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
-      </motion.nav>
+      </div>
 
       {/* Mobile menu */}
       <AnimatePresence>
@@ -104,23 +102,12 @@ const Navbar = () => {
                     {link.label}
                   </a>
                 ))}
-                <div className="pt-6 border-t border-border space-y-3">
+                <div className="pt-6 border-t border-border">
                   <Button variant="hero" size="xl" className="w-full" asChild>
                     <a href={getPhoneLink()}>
                       <Phone className="w-5 h-5" />
                       Call Now
                     </a>
-                  </Button>
-                  <Button 
-                    variant="goldOutline" 
-                    size="xl" 
-                    className="w-full"
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsQuoteModalOpen(true);
-                    }}
-                  >
-                    Get Quote
                   </Button>
                 </div>
               </div>
@@ -128,10 +115,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Quote Modal */}
-      <GetQuoteModal open={isQuoteModalOpen} onOpenChange={setIsQuoteModalOpen} />
-    </>
+    </motion.nav>
   );
 };
 

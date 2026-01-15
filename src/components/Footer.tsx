@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import { getPhoneLink, PHONE_DISPLAY } from "@/lib/contact";
 
 const Footer = () => {
   return (
     <footer className="relative bg-charcoal-light border-t border-border">
-      {/* Gold accent line */}
+      {/* Magenta accent line */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
       <div className="container px-6 py-16">
@@ -41,7 +41,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <span className="text-ivory-muted text-sm">
-                  LCM Ludidi Building, 3 Chatham St<br />CBD, Mthatha, 5099
+                  LCM Ludidi Building, 3 Chatham St<br />CBD, Shop no.8 Mthatha, 5099
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -54,8 +54,17 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <a 
+                  href="mailto:ovationszazi@gmail.com" 
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors"
+                >
+                  ovationszazi@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-ivory-muted text-sm">24-Hour Service</span>
+                <span className="text-ivory-muted text-sm">8am - 5pm Mon-Sat</span>
               </li>
             </ul>
           </motion.div>
@@ -70,11 +79,13 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-6 text-foreground">Services</h4>
             <ul className="space-y-3">
               {[
-                "Business Branding",
-                "Professional Signage",
-                "Visual Identity",
-                "Custom Prints",
-                "Full Solutions",
+                "Branding",
+                "Design",
+                "Signage",
+                "Printing",
+                "Website",
+                "Fashion",
+                "Photography/Videography",
               ].map((service) => (
                 <li key={service}>
                   <span className="text-ivory-muted text-sm hover:text-primary transition-colors cursor-pointer">
@@ -85,27 +96,48 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Promise */}
+          {/* Socials */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <h4 className="font-display font-semibold mb-6 text-foreground">Our Promise</h4>
+            <h4 className="font-display font-semibold mb-6 text-foreground">Follow Us</h4>
             <ul className="space-y-3">
-              {[
-                "Quality Materials",
-                "On-Time Delivery",
-                "Professional Finish",
-                "Local Expertise",
-                "Trusted Reputation",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2">
+              <li>
+                <a 
+                  href="https://www.tiktok.com/@ovations3" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-2"
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  <span className="text-ivory-muted text-sm">{item}</span>
-                </li>
-              ))}
+                  TikTok: @ovations3
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.facebook.com/ovationsza" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  Facebook: ovationsza
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.instagram.com/ovationszazi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  Instagram: ovationszazi
+                </a>
+              </li>
             </ul>
           </motion.div>
         </div>
@@ -114,10 +146,10 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Ovations. Mthatha's Premium Branding Partner.
+              © {new Date().getFullYear()} Ovations. South Africa's Premium Branding Partner.
             </p>
             <p className="text-sm text-muted-foreground">
-              <span className="text-primary">★</span> "Best Branding Company in Mthatha" — Our Clients
+              <span className="text-primary">★</span> "Best Branding Company in South Africa" — Our Clients
             </p>
           </div>
         </div>

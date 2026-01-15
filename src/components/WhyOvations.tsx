@@ -4,7 +4,7 @@ import { Shield, Users, Award, Clock } from "lucide-react";
 const reasons = [
   {
     icon: Shield,
-    title: "Trusted by Mthatha",
+    title: "Trusted in South Africa",
     description: "Before we had a website, we had your trust. Years of delivering quality work built our reputation the old-fashioned way — word of mouth.",
   },
   {
@@ -19,8 +19,8 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "Always Available",
-    description: "24-hour service means we're here when you need us. Deadlines aren't suggestions — they're commitments we honor.",
+    title: "Reliable Service",
+    description: "Open 8am - 5pm Mon-Sat. Deadlines aren't suggestions — they're commitments we honor.",
   },
 ];
 
@@ -39,10 +39,10 @@ const WhyOvations = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-medium uppercase tracking-widest">
-            Why Choose Us
+            About Us
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Everyone in Mthatha Knows Us.
+            Everyone in South Africa Knows Us.
             <br />
             <span className="text-gradient-gold">Now You Do Too.</span>
           </h2>
