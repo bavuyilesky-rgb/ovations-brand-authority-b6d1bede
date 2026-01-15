@@ -37,7 +37,7 @@ const LocationMap = () => {
           </h2>
           <p className="text-ivory-muted max-w-2xl mx-auto">
             Visit our studio or call us for on-site consultations. We serve businesses 
-            across the Eastern Cape with premium branding solutions.
+            across South Africa with premium branding solutions.
           </p>
         </motion.div>
 

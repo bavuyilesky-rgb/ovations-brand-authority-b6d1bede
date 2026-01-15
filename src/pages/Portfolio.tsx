@@ -22,6 +22,9 @@ import pullupBanner from "@/assets/portfolio-pullup-banner.png";
 import trophy from "@/assets/portfolio-trophy.png";
 import tshirts from "@/assets/portfolio-tshirts.png";
 import candles from "@/assets/portfolio-candles.avif";
+import birthdayPhoto from "@/assets/portfolio-birthday.jpg";
+import weddingWhite from "@/assets/portfolio-wedding-white.jpeg";
+import phoneUV from "@/assets/portfolio-phone-uv.png";
 
 type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion" | "software";
 
@@ -154,7 +157,7 @@ const projects: Project[] = [
     category: "printing",
     client: "Tech Accessories Shop",
     description: "Custom phone covers and accessories using UV DTF technology for vibrant, scratch-resistant designs on hard surfaces.",
-    image: servicePrints,
+    image: phoneUV,
     results: ["2880x1440 dpi quality", "Scratch resistant", "Custom designs"],
   },
   // Photography
@@ -164,7 +167,7 @@ const projects: Project[] = [
     category: "photography",
     client: "Private Wedding",
     description: "Complete wedding photography including traditional ceremonies, umgidi, and reception coverage.",
-    image: serviceBranding,
+    image: weddingWhite,
     results: ["Full day coverage", "Edited album", "Lasting memories"],
   },
   {
@@ -178,11 +181,11 @@ const projects: Project[] = [
   },
   {
     id: "16",
-    title: "Event Photography Package",
+    title: "Birthday Celebration",
     category: "photography",
-    client: "Baby Shower Celebration",
+    client: "Birthday Party",
     description: "Event photography coverage for baby showers, bridal showers, birthdays, and special occasions.",
-    image: serviceBranding,
+    image: birthdayPhoto,
     results: ["Candid moments captured", "Same-day previews", "Full gallery access"],
   },
   // Fashion
@@ -431,76 +434,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* UV DTF Highlight */}
-      <section className="py-20 bg-charcoal-light">
-        <div className="container px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">
-              Advanced Technology
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mt-4 mb-6">
-              UV DTF <span className="text-gradient-gold">Printing</span>
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid lg:grid-cols-2 gap-12 items-center"
-          >
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src={servicePrints}
-                alt="UV DTF Printing"
-                className="w-full aspect-[4/3] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-
-            <div>
-              <p className="text-ivory-muted mb-6 leading-relaxed">
-                UV DTF (Direct-to-Film) printers utilize ultraviolet ink technology to print vibrant, 
-                durable designs onto A-B films with the use of a laminator. These printers are ideal for 
-                ceramics, hard surfaces, round objects, phone covers, PVC, wood, metal, acrylic and many more applications.
-              </p>
-
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="bg-card border border-border rounded-xl p-4 text-center">
-                  <p className="font-display text-2xl font-bold text-primary">2880×1440</p>
-                  <p className="text-sm text-muted-foreground mt-1">DPI Resolution</p>
-                </div>
-                <div className="bg-card border border-border rounded-xl p-4 text-center">
-                  <p className="font-display text-2xl font-bold text-primary">A3 & A4</p>
-                  <p className="text-sm text-muted-foreground mt-1">Flatbed Sizes</p>
-                </div>
-                <div className="bg-card border border-border rounded-xl p-4 text-center">
-                  <p className="font-display text-2xl font-bold text-primary">CMYK+</p>
-                  <p className="text-sm text-muted-foreground mt-1">White & Clear Ink</p>
-                </div>
-                <div className="bg-card border border-border rounded-xl p-4 text-center">
-                  <p className="font-display text-2xl font-bold text-primary">60 sqm/h</p>
-                  <p className="text-sm text-muted-foreground mt-1">Print Speed</p>
-                </div>
-              </div>
-
-              <div className="border-l-4 border-primary pl-4">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Perfect For:</p>
-                <p className="text-ivory-muted">
-                  Ceramic printing, phone covers, round objects, industrial labels, signage solutions, and promotional products.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       <CTA />
       <Footer />
