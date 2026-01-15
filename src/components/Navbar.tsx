@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPhoneLink } from "@/lib/contact";
-import logo from "@/assets/logo-main.png";
+import logo from "@/assets/logo-new.jpeg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <img src={logo} alt="Ovations Logo" className="h-12 w-auto" />
+            <img src={logo} alt="Ovations Logo" className="h-12 w-auto" style={{ mixBlendMode: 'multiply', filter: 'contrast(1.1)' }} />
           </a>
 
           {/* Desktop navigation */}

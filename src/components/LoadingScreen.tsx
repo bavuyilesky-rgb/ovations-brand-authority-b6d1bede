@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/logo-new.jpeg";
 
 const LoadingScreen = () => {
   return (
@@ -12,16 +13,19 @@ const LoadingScreen = () => {
       <div className="absolute w-[300px] h-[300px] bg-primary/20 rounded-full blur-[100px]" />
       
       <div className="relative flex flex-col items-center">
-        {/* Logo text */}
+        {/* Logo image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="relative"
         >
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-gradient-gold tracking-tight">
-            OVATIONS
-          </h1>
+          <img 
+            src={logo} 
+            alt="Ovations Logo" 
+            className="h-24 md:h-32 w-auto"
+            style={{ mixBlendMode: 'multiply', filter: 'contrast(1.1)' }}
+          />
           
           {/* Underline animation */}
           <motion.div
