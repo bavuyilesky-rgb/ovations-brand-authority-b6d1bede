@@ -144,14 +144,14 @@ export default {
   					opacity: '1'
   				}
   			},
-  			'glow-pulse': {
-  				'0%, 100%': {
-  					boxShadow: '0 0 20px hsl(43 74% 49% / 0.3)'
-  				},
-  				'50%': {
-  					boxShadow: '0 0 40px hsl(43 74% 49% / 0.5)'
-  				}
-  			}
+			'glow-pulse': {
+				'0%, 100%': {
+					boxShadow: '0 0 20px hsl(330 100% 50% / 0.3)'
+				},
+				'50%': {
+					boxShadow: '0 0 40px hsl(330 100% 50% / 0.5)'
+				}
+			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',

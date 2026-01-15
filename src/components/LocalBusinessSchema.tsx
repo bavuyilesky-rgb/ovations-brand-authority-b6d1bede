@@ -14,7 +14,7 @@ const LocalBusinessSchema = () => {
     email: "info@ovations.co.za",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "LCM Ludidi Building, 3 Chatham St, CBD",
+      streetAddress: "LCM Ludidi Building, 3 Chatham St, CBD, Shop no.8",
       addressLocality: "Mthatha",
       addressRegion: "Eastern Cape",
       postalCode: "5099",
@@ -44,10 +44,9 @@ const LocalBusinessSchema = () => {
         "Thursday",
         "Friday",
         "Saturday",
-        "Sunday",
       ],
-      opens: "00:00",
-      closes: "23:59",
+      opens: "08:00",
+      closes: "17:00",
     },
     aggregateRating: {
       "@type": "AggregateRating",

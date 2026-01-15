@@ -1,62 +1,178 @@
-import { motion } from "framer-motion";
-import { Sparkles, Building2, Palette, PenTool, Layers, Code, Camera, Shirt, Printer } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, Palette, Building2, Printer, Code, Shirt, Camera, ChevronDown } from "lucide-react";
 
-const services = [
+interface ServiceItem {
+  icon: React.ElementType;
+  title: string;
+  items: string[];
+}
+
+const services: ServiceItem[] = [
   {
     icon: Sparkles,
-    title: "Business Branding",
-    result: "Stand out from competitors",
-    description: "Complete brand identity that makes customers remember you. From logo design to brand guidelines that ensure consistency across every touchpoint.",
-  },
-  {
-    icon: Building2,
-    title: "Professional Signage",
-    result: "Get noticed from the street",
-    description: "Eye-catching signs that turn passersby into customers. Illuminated signs, 3D lettering, and storefront displays that command attention.",
+    title: "Branding",
+    items: [
+      "Candle Sticker - R50",
+      "Shirt Branding R70 upwards",
+      "Name Tags R50",
+      "Pull up Banners R1300",
+      "X Banners R1000",
+      "Wall Banners 2.2m R5000",
+      "Wall Banners 3m R7000",
+      "Car Branding R2000 upwards",
+      "Coffee mug White/Glass R70",
+      "Magic Mug R140",
+      "Key Holder R70",
+      "Sublimated Plate R250",
+      "Welcome Board R350",
+      "Wrist Tags R2.80 each",
+      "Design R150 Print R4 each",
+      "Laptop Branding R150",
+      "Canvas: A1 - R850, A2 - R650, A3 - R450, A4 - R250",
+      "Clock Branding R250",
+      "Crystal Trophy R450",
+    ],
   },
   {
     icon: Palette,
-    title: "Visual Identity",
-    result: "Build instant credibility",
-    description: "Cohesive visual systems that communicate professionalism. Business cards, letterheads, and marketing materials that make an impression.",
+    title: "Design",
+    items: [
+      "Certificate Design R150 Print R10 each",
+      "Funeral Program Design R70 Print CL(R12), BL(R2)",
+      "Poster Design R150",
+      "Invitation Cards Design R150",
+      "Business Cards Design R150 Print R1.5 each",
+      "Calendar Design R150",
+      "Table Programme R25",
+    ],
   },
   {
-    icon: PenTool,
-    title: "Custom Prints",
-    result: "Promote anywhere, anytime",
-    description: "High-quality prints for any purpose. Banners, posters, vehicle wraps, and promotional materials that carry your message far and wide.",
-  },
-  {
-    icon: Layers,
-    title: "End-to-End Solutions",
-    result: "One partner, complete peace of mind",
-    description: "From concept to installation, we handle everything. Design, production, and installation — delivered on time, every time.",
-  },
-  {
-    icon: Code,
-    title: "Software Development",
-    result: "Digitize your business",
-    description: "Custom web applications, e-commerce platforms, booking systems, and business management solutions. Mobile-responsive apps that grow with your business.",
-  },
-  {
-    icon: Camera,
-    title: "Photography",
-    result: "Capture your moments",
-    description: "Professional indoor studio and outdoor photography. Weddings, birthdays, umgidi, funerals, baby showers, bridal showers, corporate events and all celebrations.",
-  },
-  {
-    icon: Shirt,
-    title: "Fashion & Apparel",
-    result: "Dress your brand",
-    description: "Custom school ties, corporate uniforms, branded t-shirts, and fashion accessories. Quality apparel that represents your organization with style.",
+    icon: Building2,
+    title: "Signage",
+    items: [
+      "Indoor and Outdoor Signages",
+      "Building Sign",
+      "Street Sign",
+    ],
   },
   {
     icon: Printer,
-    title: "UV DTF Printing",
-    result: "Print on any surface",
-    description: "High-resolution UV DTF printing up to 2880x1440 dpi for ceramics, phone covers, round objects, PVC, wood, metal, acrylic and more. Vibrant, durable designs.",
+    title: "Printing",
+    items: [
+      "Documents Print",
+      "Business Cards",
+      "Certificates",
+      "Photos",
+      "ID Cards",
+      "etc.",
+    ],
+  },
+  {
+    icon: Code,
+    title: "Website",
+    items: [
+      "Custom web applications",
+      "E-commerce platforms",
+      "Booking & Appointment System",
+      "Business management systems",
+    ],
+  },
+  {
+    icon: Shirt,
+    title: "Fashion",
+    items: [
+      "Ovations Merch",
+      "Custom Designs",
+    ],
+  },
+  {
+    icon: Camera,
+    title: "Photography/Videography",
+    items: [
+      "Indoor & Outdoor Studio Shots",
+      "Amabaso",
+      "Wedding",
+      "Birthdays",
+      "Umgidi",
+      "Funerals",
+      "Baby Shower",
+      "Bridal Shower",
+      "etc.",
+      "───────────────────────",
+      "Book Your Shoot Today:",
+      "• 30 minutes: R300 (2 people, 2 outfit changes, 40 edited pictures)",
+      "• 45 minutes: R400 (3 people, 3 outfit changes, 45 edited pictures)",
+      "• 1 hour: R500 (Max 5 people, 3 outfit changes, 50 edited pictures)",
+      "• 2 hours: R800 (Max 8 people, unlimited pictures & outfit changes)",
+    ],
   },
 ];
+
+const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="group relative"
+    >
+      <div 
+        className="h-full p-6 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-500 cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            {/* Icon */}
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+              <service.icon className="w-6 h-6 text-primary" />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-display text-lg font-semibold">
+              {service.title}
+            </h3>
+          </div>
+
+          {/* Chevron */}
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ChevronDown className="w-5 h-5 text-primary" />
+          </motion.div>
+        </div>
+
+        {/* Dropdown content */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <ul className="mt-4 pt-4 border-t border-border space-y-2">
+                {service.items.map((item, i) => (
+                  <li 
+                    key={i} 
+                    className={`text-sm ${item.startsWith('•') || item.startsWith('───') ? 'text-ivory-muted font-medium' : 'text-ivory-muted'} ${item.startsWith('Book Your Shoot') ? 'text-primary font-semibold mt-2' : ''}`}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+};
 
 const Services = () => {
   return (
@@ -79,40 +195,13 @@ const Services = () => {
             What We <span className="text-gradient-gold">Create</span> For You
           </h2>
           <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
-            Every service is designed with one goal: making your business impossible to ignore.
+            Click on any service to see pricing and details.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group relative"
-            >
-              <div className="h-full p-8 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-500 hover:translate-y-[-4px]">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6">
-                  <service.icon className="w-7 h-7 text-primary" />
-                </div>
-
-                {/* Result tag */}
-                <span className="inline-block text-xs font-medium text-primary uppercase tracking-wider mb-3 px-3 py-1 bg-primary/10 rounded-full">
-                  {service.result}
-                </span>
-
-                {/* Content */}
-                <h3 className="font-display text-xl font-semibold mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-ivory-muted text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
+            <ServiceCard key={service.title} service={service} index={index} />
           ))}
         </div>
       </div>

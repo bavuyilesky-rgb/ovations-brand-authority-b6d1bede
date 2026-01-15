@@ -23,7 +23,7 @@ const CTA = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-primary/30 bg-primary/5">
             <Clock className="w-4 h-4 text-primary" />
             <span className="text-sm text-ivory-muted font-medium">
-              24-Hour Service Available
+              Open Mon-Sat 8am - 5pm
             </span>
           </div>
 
@@ -35,7 +35,7 @@ const CTA = () => {
 
           <p className="text-lg md:text-xl text-ivory-muted max-w-2xl mx-auto mb-10">
             Join the businesses that chose quality over compromise. 
-            Get a free consultation and see why we're Mthatha's most trusted name in branding.
+            Get in touch and see why we're South Africa's most trusted name in branding.
           </p>
 
           {/* CTA buttons */}
@@ -57,7 +57,7 @@ const CTA = () => {
 
           {/* Trust line */}
           <p className="text-sm text-muted-foreground">
-            ★ 4.3 Rating • Trusted by 100+ Local Businesses • Based in Mthatha
+            ★ 4.3 Rating • Trusted by 100+ Local Businesses • Based in South Africa
           </p>
         </motion.div>
       </div>
