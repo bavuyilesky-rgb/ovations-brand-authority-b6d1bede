@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyOvations from "@/components/WhyOvations";
 import Services from "@/components/Services";
-import Showcase from "@/components/Showcase";
+import PortfolioPreview from "@/components/PortfolioPreview";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import Process from "@/components/Process";
 import FAQ from "@/components/FAQ";
@@ -24,7 +24,7 @@ const Index = () => {
       <section id="services">
         <Services />
       </section>
-      <Showcase />
+      <PortfolioPreview />
       <section id="reviews">
         <TestimonialsCarousel />
       </section>
