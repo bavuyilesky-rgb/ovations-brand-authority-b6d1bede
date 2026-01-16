@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, Palette, Building2, Printer, Code, Shirt, Camera, ChevronDown, PartyPopper, Crown } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 interface ServiceItem {
   icon: React.ElementType;
@@ -148,9 +149,7 @@ const services: ServiceItem[] = [
   },
 ];
 
-const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const ServiceCard = ({ service, index, isOpen, onToggle }: { service: ServiceItem; index: number; isOpen: boolean; onToggle: () => void }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -161,7 +160,7 @@ const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }
     >
       <div 
         className="h-full p-6 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-500 cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -214,6 +213,33 @@ const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }
 };
 
 const Services = () => {
+  const [openServiceIndex, setOpenServiceIndex] = useState<number | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there's a service to open from sessionStorage
+    const serviceToOpen = sessionStorage.getItem('openService');
+    if (serviceToOpen) {
+      const serviceIndex = services.findIndex(s => s.title === serviceToOpen);
+      if (serviceIndex !== -1) {
+        setOpenServiceIndex(serviceIndex);
+        // Scroll to services section after a short delay
+        setTimeout(() => {
+          const servicesSection = document.getElementById('services');
+          if (servicesSection) {
+            servicesSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+      // Clear the stored service
+      sessionStorage.removeItem('openService');
+    }
+  }, [location]);
+
+  const handleToggle = (index: number) => {
+    setOpenServiceIndex(openServiceIndex === index ? null : index);
+  };
+
   return (
     <section className="py-24 md:py-32 bg-charcoal-light relative">
       {/* Decorative elements */}
@@ -240,7 +266,13 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <ServiceCard key={service.title} service={service} index={index} />
+            <ServiceCard 
+              key={service.title} 
+              service={service} 
+              index={index} 
+              isOpen={openServiceIndex === index}
+              onToggle={() => handleToggle(index)}
+            />
           ))}
         </div>
       </div>
