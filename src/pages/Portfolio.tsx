@@ -30,7 +30,7 @@ import mallDirectory from "@/assets/portfolio-mall-directory.png";
 import streetSign from "@/assets/portfolio-street-sign.png";
 import schoolTies from "@/assets/portfolio-school-ties.png";
 import weddingInvite from "@/assets/portfolio-wedding-invite.png";
-import logoMain from "@/assets/logo-main.png";
+import ovationsLogo from "@/assets/portfolio-ovations-logo.jpeg";
 
 type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion" | "software";
 
@@ -220,7 +220,7 @@ const projects: Project[] = [
     category: "software",
     client: "Ovations",
     description: "Modern, responsive company website showcasing all services including branding, design, signage, printing, photography, and fashion.",
-    image: logoMain,
+    image: ovationsLogo,
     results: ["Professional online presence", "Mobile responsive", "Service showcase"],
   },
 ];
