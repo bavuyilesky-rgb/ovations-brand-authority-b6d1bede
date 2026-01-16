@@ -25,6 +25,12 @@ import candles from "@/assets/portfolio-candles.avif";
 import birthdayPhoto from "@/assets/portfolio-birthday.jpg";
 import weddingWhite from "@/assets/portfolio-wedding-white.jpeg";
 import phoneUV from "@/assets/portfolio-phone-uv.png";
+import bdayInvite from "@/assets/portfolio-bday-invite.png";
+import mallDirectory from "@/assets/portfolio-mall-directory.png";
+import streetSign from "@/assets/portfolio-street-sign.png";
+import schoolTies from "@/assets/portfolio-school-ties.png";
+import weddingInvite from "@/assets/portfolio-wedding-invite.png";
+import logoMain from "@/assets/logo-main.png";
 
 type Category = "all" | "branding" | "designs" | "signage" | "printing" | "photography" | "fashion" | "software";
 
@@ -83,7 +89,7 @@ const projects: Project[] = [
     category: "designs",
     client: "Private Client",
     description: "Complete wedding stationery including invitations, programs, and save-the-dates with elegant typography.",
-    image: servicePrints,
+    image: weddingInvite,
     results: ["Cohesive design theme", "Premium paper stock", "Guest appreciation"],
   },
   {
@@ -101,7 +107,7 @@ const projects: Project[] = [
     category: "designs",
     client: "Birthday Celebrations",
     description: "Animated video invitations with music, custom graphics, and event details for social media sharing.",
-    image: servicePrints,
+    image: bdayInvite,
     results: ["Viral potential", "Modern appeal", "Easy sharing"],
   },
   // Signage
@@ -120,7 +126,7 @@ const projects: Project[] = [
     category: "signage",
     client: "Mthatha Mall",
     description: "Large-scale directory signage and wayfinding system for a major shopping center with 50+ stores.",
-    image: serviceSignage,
+    image: mallDirectory,
     results: ["Customer navigation simplified", "Professional mall image", "Reduced complaints"],
   },
   {
@@ -129,7 +135,7 @@ const projects: Project[] = [
     category: "signage",
     client: "Mthatha Municipality",
     description: "Durable outdoor street signs and directional signage for improved community navigation.",
-    image: serviceSignage,
+    image: streetSign,
     results: ["Weather resistant", "Clear visibility", "Community benefit"],
   },
   // Printing
@@ -195,7 +201,7 @@ const projects: Project[] = [
     category: "fashion",
     client: "Mthatha High Schools",
     description: "Custom school ties with embroidered logos and school colors for multiple institutions.",
-    image: serviceBranding,
+    image: schoolTies,
     results: ["School pride", "Durable materials", "Bulk pricing"],
   },
   {
@@ -210,39 +216,12 @@ const projects: Project[] = [
   // Software Development
   {
     id: "19",
-    title: "Business Management System",
+    title: "Ovations Website",
     category: "software",
-    client: "Mthatha Enterprises",
-    description: "Custom web application for inventory management, sales tracking, and employee management with real-time analytics.",
-    image: serviceBranding,
-    results: ["50% efficiency increase", "Real-time reporting", "Mobile accessible"],
-  },
-  {
-    id: "20",
-    title: "E-Commerce Platform",
-    category: "software",
-    client: "Local Retail Store",
-    description: "Full-featured online store with payment integration, order management, and delivery tracking for local businesses.",
-    image: servicePrints,
-    results: ["Online sales enabled", "Secure payments", "Customer growth"],
-  },
-  {
-    id: "21",
-    title: "Booking & Appointment System",
-    category: "software",
-    client: "Beauty Salon",
-    description: "Online booking platform with calendar management, SMS reminders, and customer database for service businesses.",
-    image: serviceSignage,
-    results: ["Automated bookings", "Reduced no-shows", "Client management"],
-  },
-  {
-    id: "22",
-    title: "School Management Portal",
-    category: "software",
-    client: "Private School",
-    description: "Comprehensive school management system with student records, grade tracking, parent portal, and fee management.",
-    image: serviceBranding,
-    results: ["Streamlined admin", "Parent engagement", "Digital records"],
+    client: "Ovations",
+    description: "Modern, responsive company website showcasing all services including branding, design, signage, printing, photography, and fashion.",
+    image: logoMain,
+    results: ["Professional online presence", "Mobile responsive", "Service showcase"],
   },
 ];
 

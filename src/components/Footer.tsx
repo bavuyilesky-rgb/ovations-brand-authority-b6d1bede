@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import { getPhoneLink, PHONE_DISPLAY } from "@/lib/contact";
+import { FaTiktok, FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -110,10 +111,10 @@ const Footer = () => {
                   href="https://www.tiktok.com/@ovations3" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-2"
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-3"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  TikTok: @ovations3
+                  <FaTiktok className="w-5 h-5 text-primary" />
+                  @ovations3
                 </a>
               </li>
               <li>
@@ -121,10 +122,10 @@ const Footer = () => {
                   href="https://www.facebook.com/ovationsza" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-2"
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-3"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Facebook: ovationsza
+                  <FaFacebookF className="w-5 h-5 text-primary" />
+                  ovationsza
                 </a>
               </li>
               <li>
@@ -132,10 +133,10 @@ const Footer = () => {
                   href="https://www.instagram.com/ovationszazi" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-2"
+                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-3"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Instagram: ovationszazi
+                  <FaInstagram className="w-5 h-5 text-primary" />
+                  ovationszazi
                 </a>
               </li>
             </ul>
