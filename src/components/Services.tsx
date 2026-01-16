@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Palette, Building2, Printer, Code, Shirt, Camera, ChevronDown } from "lucide-react";
+import { Sparkles, Palette, Building2, Printer, Code, Shirt, Camera, ChevronDown, PartyPopper, Crown } from "lucide-react";
 
 interface ServiceItem {
   icon: React.ElementType;
@@ -100,11 +100,50 @@ const services: ServiceItem[] = [
       "Bridal Shower",
       "etc.",
       "───────────────────────",
-      "Book Your Shoot Today:",
-      "• 30 minutes: R300 (2 people, 2 outfit changes, 40 edited pictures)",
-      "• 45 minutes: R400 (3 people, 3 outfit changes, 45 edited pictures)",
-      "• 1 hour: R500 (Max 5 people, 3 outfit changes, 50 edited pictures)",
-      "• 2 hours: R800 (Max 8 people, unlimited pictures & outfit changes)",
+      "STUDIO PACKAGES:",
+      "• Single Picture - R15",
+      "• 30 Minutes Shoot (2 people, 2 outfit changes, 25 pics) - R350",
+      "• 45 Minutes Shoot (3 people, 2 outfit changes, 30 pics) - R400",
+      "• 1 Hour Shoot (4 people, 3 outfit changes, 40 pics) - R500",
+      "• 2 Hour Shoot (4 people, 3 outfit changes, 40 pics) - R800",
+      "───────────────────────",
+      "OUTDOOR SERVICES:",
+      "• 1 Hour - R600",
+      "• Full Event Photography - R3000",
+      "• Full Photography & Videography - R6000",
+      "• Photography & Short Highlight Video - R2500",
+      "───────────────────────",
+      "ADDITIONAL SERVICES:",
+      "• Poster/Flyer Design - R150",
+      "• Program Design & Typing - R180",
+    ],
+  },
+  {
+    icon: PartyPopper,
+    title: "Hiring",
+    items: [
+      "Jumping Castles",
+      "Trampoline",
+      "Portable Swimming Pool",
+      "Seesaws",
+      "Water Sliding Mat",
+      "Backdrop Wood for Events",
+      "Glass Photobooth",
+      "Tents",
+      "etc.",
+    ],
+  },
+  {
+    icon: Crown,
+    title: "Beauty Pageants",
+    items: [
+      "Grooming",
+      "Public Speaking",
+      "Confidence Development",
+      "Career Development",
+      "Community Service",
+      "Leadership Training",
+      "etc.",
     ],
   },
 ];
