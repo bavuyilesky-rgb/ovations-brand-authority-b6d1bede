@@ -32,34 +32,34 @@
 
 @layer base {
   :root {
-    /* Core palette - Deep luxury blacks with gold accents */
-    --background: 240 4% 95%;
-    --foreground: 240 5% 10%;
+    /* Light mode - Clean whites with strong contrast */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 98%;
-    --card-foreground: 240 5% 10%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 240 5% 90%;
-    --popover-foreground: 240 5% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Gold accent - The luxury signature */
+    /* Primary magenta accent */
     --primary: 333 71% 50%;
-    --primary-foreground: 327 73% 97%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 33%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 240 4% 83%;
-    --muted-foreground: 240 5% 10%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 355 100% 97%;
-    --accent-foreground: 349 89% 60%;
+    --accent: 333 71% 95%;
+    --accent-foreground: 333 71% 40%;
 
     --destructive: 0 72% 50%;
-    --destructive-foreground: 0 85% 97%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 4% 83%;
-    --input: 240 4% 83%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
     --ring: 333 71% 50%;
 
     --radius: 1.5rem;
@@ -69,9 +69,9 @@
     --gold-light: 330 100% 65%;
     --gold-dark: 330 100% 40%;
     --charcoal: 0 0% 10%;
-    --charcoal-light: 0 0% 15%;
-    --ivory: 45 10% 95%;
-    --ivory-muted: 45 5% 70%;
+    --charcoal-light: 0 0% 20%;
+    --ivory: 0 0% 98%;
+    --ivory-muted: 0 0% 40%;
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(330 100% 50%), hsl(330 100% 65%));
