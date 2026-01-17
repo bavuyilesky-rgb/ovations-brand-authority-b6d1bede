@@ -11,6 +11,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -36,6 +37,7 @@ const Index = () => {
       <CTA />
       <Footer />
       <WhatsAppButton />
+      <ScrollToTop />
     </main>
   );
 };

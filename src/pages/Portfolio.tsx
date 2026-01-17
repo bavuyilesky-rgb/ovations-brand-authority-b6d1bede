@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import serviceSignage from "@/assets/service-signage.jpg";
 import serviceBranding from "@/assets/service-branding.jpg";
@@ -251,7 +252,7 @@ const Portfolio = () => {
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container px-6 relative">
-          <Link to="/" className="inline-flex items-center gap-2 text-ivory-muted hover:text-primary transition-colors mb-8">
+          <Link to="/" className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
@@ -264,7 +265,7 @@ const Portfolio = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our <span className="text-gradient-gold">Portfolio</span>
             </h1>
-            <p className="text-lg text-ivory-muted max-w-2xl">
+            <p className="text-lg text-white max-w-2xl">
               Explore our work across Branding, Designs, Signage, Printing, Photography, and Fashion. 
               Premium solutions that deliver real results.
             </p>
@@ -305,37 +306,37 @@ const Portfolio = () => {
               className="text-center"
             >
               {activeCategory === "branding" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Branding:</span> Candles, programs, t-shirts, coffee mugs, key holders, wall clocks, pull-up banners, X-banners, backdrop banners, wall paper, laptop branding, name tags, school ties, plates, crystal trophies, canvas portraits & more.
                 </p>
               )}
               {activeCategory === "designs" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Designs:</span> Certificates, programs, invitations, posters, business cards, calendars, car magnets, video invitations and all types of graphic design.
                 </p>
               )}
               {activeCategory === "signage" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Signage:</span> Indoor and outdoor signage, building signs, street signs, illuminated signs, wayfinding systems, and directional signage.
                 </p>
               )}
               {activeCategory === "printing" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Printing:</span> Posters, banners, stickers, canvas printing, and UV DTF printing for ceramics, phone covers, round objects, PVC, wood, metal, acrylic and more. Both A3 and A4 sizes with up to 2880x1440 dpi resolution.
                 </p>
               )}
               {activeCategory === "photography" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Photography:</span> Indoor studio and outdoor shoots. Weddings, birthdays, umgidi, funerals, baby showers, bridal showers, amabaso, corporate events and all celebrations.
                 </p>
               )}
               {activeCategory === "fashion" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Fashion:</span> Custom school ties, corporate uniforms, branded apparel, and fashion accessories for organizations and businesses.
                 </p>
               )}
               {activeCategory === "software" && (
-                <p className="text-ivory-muted max-w-3xl mx-auto">
+                <p className="text-white max-w-3xl mx-auto">
                   <span className="text-primary font-semibold">Software Development:</span> Custom web applications, e-commerce platforms, booking systems, school management portals, business management systems, and mobile-responsive solutions.
                 </p>
               )}
@@ -383,7 +384,7 @@ const Portfolio = () => {
                     <h3 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-ivory-muted text-sm mb-4 line-clamp-2">
+                    <p className="text-white text-sm mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
@@ -392,7 +393,7 @@ const Portfolio = () => {
                       <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">Results</p>
                       <ul className="space-y-1">
                         {project.results.map((result, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-ivory-muted">
+                          <li key={i} className="flex items-center gap-2 text-sm text-white">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                             {result}
                           </li>
@@ -407,7 +408,7 @@ const Portfolio = () => {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-ivory-muted">No projects found in this category.</p>
+              <p className="text-white">No projects found in this category.</p>
             </div>
           )}
         </div>
@@ -416,6 +417,7 @@ const Portfolio = () => {
 
       <CTA />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

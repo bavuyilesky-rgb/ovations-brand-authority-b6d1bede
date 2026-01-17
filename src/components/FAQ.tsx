@@ -60,7 +60,7 @@ const FAQ = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             Frequently Asked <span className="text-gradient-gold">Questions</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-white text-lg max-w-2xl mx-auto">
             Everything you need to know about our services, pricing, and process.
           </p>
         </motion.div>

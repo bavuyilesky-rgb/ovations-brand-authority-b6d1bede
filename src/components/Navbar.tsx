@@ -7,12 +7,21 @@ import { getPhoneLink } from "@/lib/contact";
 import { useTheme } from "@/components/ThemeProvider";
 import logo from "@/assets/logo-new.jpeg";
 
+// Ensure useTheme doesn't throw on Portfolio page
+const useSafeTheme = () => {
+  try {
+    return useTheme();
+  } catch {
+    return { theme: "dark" as const, setTheme: () => {} };
+  }
+};
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useSafeTheme();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -96,13 +105,16 @@ const Navbar = () => {
                 <ArrowLeft className="w-5 h-5" />
               </button>
             )}
-            <a href="/" className="flex items-center">
+            <a href="/" className="flex items-center gap-2">
               <img
                 src={logo}
                 alt="Ovations Logo"
                 className="h-10 md:h-12 w-auto"
                 style={{ mixBlendMode: "multiply", filter: "contrast(1.1)" }}
               />
+              <span className="font-display text-lg md:text-xl font-bold text-foreground">
+                Ovations
+              </span>
             </a>
           </div>
 
@@ -119,7 +131,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA and Theme Toggle */}
+          {/* Desktop Theme Toggle */}
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={toggleTheme}
@@ -132,12 +144,6 @@ const Navbar = () => {
                 <Moon className="w-5 h-5" />
               )}
             </button>
-            <Button variant="gold" size="default" asChild>
-              <a href={getPhoneLink()}>
-                <Phone className="w-4 h-4" />
-                Call Now
-              </a>
-            </Button>
           </div>
 
           {/* Mobile: Theme toggle and menu button */}
