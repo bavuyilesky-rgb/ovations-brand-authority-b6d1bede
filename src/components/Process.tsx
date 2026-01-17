@@ -48,7 +48,7 @@ const Process = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             Simple. Professional. <span className="text-gradient-gold">Effective.</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-white text-lg max-w-2xl mx-auto">
             No complicated processes. Just clear communication, quality work, and results you can see.
           </p>
         </motion.div>
@@ -83,7 +83,7 @@ const Process = () => {
                 <h3 className="font-display text-xl font-semibold mb-2">
                   {step.title}
                 </h3>
-                <p className="text-ivory-muted text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>

@@ -21,7 +21,7 @@ const Footer = () => {
             <h3 className="font-display text-2xl font-bold text-gradient-gold mb-4">
               OVATIONS
             </h3>
-            <p className="text-ivory-muted text-sm leading-relaxed mb-6">
+            <p className="text-white text-sm leading-relaxed mb-6">
               Premium branding and signage solutions that transform businesses into landmarks.
             </p>
             <div className="flex items-center gap-2">
@@ -41,7 +41,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-ivory-muted text-sm">
+                <span className="text-white text-sm">
                   LCM Ludidi Building, 3 Chatham St<br />CBD, Shop no.8 Mthatha, 5099
                 </span>
               </li>
@@ -49,7 +49,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <a 
                   href={getPhoneLink()} 
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors"
+                  className="text-white text-sm hover:text-primary transition-colors"
                 >
                   {PHONE_DISPLAY}
                 </a>
@@ -58,14 +58,14 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <a 
                   href="mailto:ovationszazi@gmail.com" 
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors"
+                  className="text-white text-sm hover:text-primary transition-colors"
                 >
                   ovationszazi@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-ivory-muted text-sm">8am - 5pm Mon-Sat</span>
+                <span className="text-white text-sm">8am - 5pm Mon-Sat</span>
               </li>
             </ul>
           </motion.div>
@@ -89,7 +89,7 @@ const Footer = () => {
                 "Photography/Videography",
               ].map((service) => (
                 <li key={service}>
-                  <span className="text-ivory-muted text-sm hover:text-primary transition-colors cursor-pointer">
+                  <span className="text-white text-sm hover:text-primary transition-colors cursor-pointer">
                     {service}
                   </span>
                 </li>
@@ -111,7 +111,7 @@ const Footer = () => {
                   href="https://www.tiktok.com/@ovations3" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-3"
+                  className="text-white text-sm hover:text-primary transition-colors flex items-center gap-3"
                 >
                   <FaTiktok className="w-5 h-5 text-primary" />
                   @ovations3
@@ -122,7 +122,7 @@ const Footer = () => {
                   href="https://www.facebook.com/ovationsza" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-3"
+                  className="text-white text-sm hover:text-primary transition-colors flex items-center gap-3"
                 >
                   <FaFacebookF className="w-5 h-5 text-primary" />
                   ovationsza
@@ -133,7 +133,7 @@ const Footer = () => {
                   href="https://www.instagram.com/ovationszazi" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-ivory-muted text-sm hover:text-primary transition-colors flex items-center gap-3"
+                  className="text-white text-sm hover:text-primary transition-colors flex items-center gap-3"
                 >
                   <FaInstagram className="w-5 h-5 text-primary" />
                   ovationszazi
