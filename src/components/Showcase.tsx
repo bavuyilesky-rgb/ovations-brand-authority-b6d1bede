@@ -88,7 +88,7 @@ const Showcase = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             What We <span className="text-gradient-gold">Offer</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Click on any service to view pricing and details.
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ const Showcase = () => {
                 <h3 className="font-display text-base font-semibold text-foreground text-center mb-1 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
-                <span className="text-xs text-ivory-muted text-center">
+                <span className="text-xs text-muted-foreground text-center">
                   {item.category}
                 </span>
 

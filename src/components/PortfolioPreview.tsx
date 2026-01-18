@@ -39,7 +39,7 @@ const PortfolioPreview = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             See the <span className="text-gradient-gold">Difference</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Quality speaks for itself. Here's a glimpse of what premium branding looks like.
           </p>
         </motion.div>

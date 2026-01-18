@@ -179,55 +179,57 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
+            {/* Full screen backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              className="fixed inset-0 bg-black/70 z-[60] md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
+              aria-hidden="true"
             />
-            {/* Menu panel */}
+            {/* Full-height menu panel */}
             <motion.div
               ref={menuRef}
               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed top-0 right-0 h-full w-4/5 max-w-sm z-50 bg-background border-l border-border shadow-2xl md:hidden"
+              className="fixed inset-y-0 right-0 w-full max-w-sm z-[70] bg-background border-l border-border shadow-2xl md:hidden"
+              style={{ height: '100dvh' }}
             >
               <div className="flex flex-col h-full">
-                {/* Menu header */}
-                <div className="flex items-center justify-between p-4 border-b border-border">
-                  <span className="font-display font-semibold text-foreground">Menu</span>
+                {/* Menu header with close button */}
+                <div className="flex items-center justify-between p-4 border-b border-border bg-background">
+                  <span className="font-display font-semibold text-foreground text-lg">Menu</span>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-2 text-foreground hover:text-primary transition-colors"
+                    className="p-2 text-foreground hover:text-primary transition-colors rounded-lg hover:bg-muted"
                     aria-label="Close menu"
                   >
                     <X className="w-6 h-6" />
                   </button>
                 </div>
 
-                {/* Navigation links */}
-                <div className="flex-1 overflow-y-auto p-6">
-                  <div className="flex flex-col gap-4">
+                {/* Navigation links - scrollable */}
+                <div className="flex-1 overflow-y-auto p-6 bg-background">
+                  <nav className="flex flex-col gap-2">
                     {navLinks.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-xl font-display font-semibold text-foreground hover:text-primary transition-colors py-2"
+                        className="text-xl font-display font-semibold text-foreground hover:text-primary hover:bg-muted/50 transition-colors py-3 px-4 rounded-lg"
                       >
                         {link.label}
                       </a>
                     ))}
-                  </div>
+                  </nav>
                 </div>
 
                 {/* CTA at bottom */}
-                <div className="p-6 border-t border-border">
+                <div className="p-6 border-t border-border bg-background">
                   <Button variant="hero" size="lg" className="w-full" asChild>
                     <a href={getPhoneLink()} onClick={() => setIsMobileMenuOpen(false)}>
                       <Phone className="w-5 h-5" />

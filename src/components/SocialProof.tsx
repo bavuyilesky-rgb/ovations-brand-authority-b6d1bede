@@ -41,7 +41,7 @@ const SocialProof = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             The Streets <span className="text-gradient-gold">Talk</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             We didn't build our reputation online. We built it in Mthatha, 
             one satisfied customer at a time.
           </p>

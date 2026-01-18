@@ -22,7 +22,7 @@ const CTA = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-primary/30 bg-primary/5">
             <Clock className="w-4 h-4 text-primary" />
-            <span className="text-sm text-ivory-muted font-medium">
+            <span className="text-sm text-muted-foreground font-medium">
               Open Mon-Sat 8am - 5pm
             </span>
           </div>
@@ -33,7 +33,7 @@ const CTA = () => {
             <span className="text-gradient-gold">Your Brand?</span>
           </h2>
 
-          <p className="text-lg md:text-xl text-ivory-muted max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Join the businesses that chose quality over compromise. 
             Get in touch and see why we're South Africa's most trusted name in branding.
           </p>
