@@ -46,7 +46,7 @@ const WhyOvations = () => {
             <br />
             <span className="text-gradient-gold">Now You Do Too.</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             We built our name on trust, not marketing. Every sign we install is a promise kept, 
             every brand we create is a business transformed.
           </p>
@@ -73,7 +73,7 @@ const WhyOvations = () => {
                   {reason.title}
                 </h3>
                 
-                <p className="text-ivory-muted leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {reason.description}
                 </p>
               </div>

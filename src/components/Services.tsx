@@ -198,7 +198,7 @@ const ServiceCard = ({ service, index, isOpen, onToggle }: { service: ServiceIte
                 {service.items.map((item, i) => (
                   <li 
                     key={i} 
-                    className={`text-sm ${item.startsWith('•') || item.startsWith('───') ? 'text-ivory-muted font-medium' : 'text-ivory-muted'} ${item.startsWith('Book Your Shoot') ? 'text-primary font-semibold mt-2' : ''}`}
+                    className={`text-sm ${item.startsWith('•') || item.startsWith('───') ? 'text-foreground/80 font-medium' : 'text-muted-foreground'} ${item.startsWith('Book Your Shoot') ? 'text-primary font-semibold mt-2' : ''}`}
                   >
                     {item}
                   </li>
@@ -259,7 +259,7 @@ const Services = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             What We <span className="text-gradient-gold">Create</span> For You
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Click on any service to see pricing and details.
           </p>
         </motion.div>

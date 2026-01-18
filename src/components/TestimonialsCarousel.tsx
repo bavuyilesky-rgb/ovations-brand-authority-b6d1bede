@@ -124,7 +124,7 @@ const TestimonialsCarousel = () => {
             Real Stories from{" "}
             <span className="text-gradient-gold">Real Clients</span>
           </h2>
-          <p className="text-ivory-muted text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Don't just take our word for it. Here's what Mthatha's business
             owners say about working with Ovations.
           </p>

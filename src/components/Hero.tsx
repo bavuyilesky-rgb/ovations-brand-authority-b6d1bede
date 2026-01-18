@@ -45,7 +45,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-primary/30 bg-primary/5"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-ivory-muted font-medium tracking-wide">
+            <span className="text-sm text-muted-foreground font-medium tracking-wide">
               Your One Stop Shop For All Your Designs And Branding Needs
             </span>
           </motion.div>
@@ -57,7 +57,7 @@ const Hero = () => {
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-lg md:text-xl text-ivory-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
             Premium branding and signage that transforms businesses into landmarks. 
             Rated 4.3★ — the name behind South Africa's most recognizable brands.
           </p>

@@ -142,7 +142,7 @@
     --secondary: 240 3% 46%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3% 46%;
-    --muted-foreground: 0 0% 98%;
+    --muted-foreground: 0 0% 70%;
     --accent: 343 87% 15%;
     --accent-foreground: 351 94% 71%;
     --border: 240 5% 33%;
@@ -171,6 +171,12 @@
     --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
     --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
     --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    
+    /* Custom tokens for dark gray sections */
+    --charcoal: 0 0% 10%;
+    --charcoal-light: 0 0% 15%;
+    --ivory: 0 0% 98%;
+    --ivory-muted: 0 0% 70%;
   }
 }
 

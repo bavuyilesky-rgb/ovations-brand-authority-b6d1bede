@@ -29,13 +29,13 @@ const LocationMap = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-primary/30 bg-primary/5">
             <MapPin className="w-4 h-4 text-primary" />
-            <span className="text-sm text-white font-medium">Find Us</span>
+            <span className="text-sm text-foreground font-medium">Find Us</span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Located in the Heart of{" "}
             <span className="text-gradient-gold">Mthatha</span>
           </h2>
-          <p className="text-white max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Visit our studio or call us for on-site consultations. We serve businesses 
             across South Africa with premium branding solutions.
           </p>
@@ -66,7 +66,7 @@ const LocationMap = () => {
           <div className="absolute bottom-6 left-6 right-6 md:right-auto md:max-w-sm">
             <div className="bg-card/95 backdrop-blur-lg border border-border rounded-xl p-6 shadow-xl">
               <h3 className="font-display font-bold text-lg mb-2 text-foreground">Ovations Studio</h3>
-              <p className="text-white text-sm mb-4">
+              <p className="text-muted-foreground text-sm mb-4">
                 LCM Ludidi Building, 3 Chatham St<br />
                 CBD, Shop no.8 Mthatha, 5099
               </p>
