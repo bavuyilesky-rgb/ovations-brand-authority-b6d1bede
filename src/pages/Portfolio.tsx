@@ -252,10 +252,6 @@ const Portfolio = () => {
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container px-6 relative">
-          <Link to="/" className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Link>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -18,18 +18,28 @@ const useSafeTheme = () => {
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const lastScrollY = useRef(0);
   const { theme, setTheme } = useSafeTheme();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const canGoBack = location.key !== "default";
-
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+      
+      // Show navbar when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY.current || currentScrollY < 50) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -84,8 +94,8 @@ const Navbar = () => {
   return (
     <motion.nav
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      animate={{ y: isVisible ? 0 : -100 }}
+      transition={{ duration: 0.3 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-md"
@@ -94,26 +104,14 @@ const Navbar = () => {
     >
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Back button and Logo */}
+          {/* Logo */}
           <div className="flex items-center gap-2">
-            {canGoBack && (
-              <button
-                onClick={handleBack}
-                className="p-2 text-foreground hover:text-primary transition-colors"
-                aria-label="Go back"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-            )}
             <a href="/" className="flex items-center gap-2">
               <img
                 src={logo}
                 alt="Ovations Logo"
                 className="h-10 md:h-12 w-auto"
               />
-              <span className="font-display text-lg md:text-xl font-bold text-foreground">
-                Ovations
-              </span>
             </a>
           </div>
 
