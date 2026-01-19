@@ -46,7 +46,7 @@ const Process = () => {
             How We Work
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Simple. Professional. <span className="text-gradient-gold">Effective.</span>
+            <span className="text-white">Simple. Professional.</span> <span className="text-gradient-gold">Effective.</span>
           </h2>
           <p className="text-white text-lg max-w-2xl mx-auto">
             No complicated processes. Just clear communication, quality work, and results you can see.

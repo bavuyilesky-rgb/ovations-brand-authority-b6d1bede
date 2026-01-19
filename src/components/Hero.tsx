@@ -12,9 +12,9 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Premium branding and signage showroom" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover object-center opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background md:from-background/80 md:via-background/90" />
       </div>
       
       {/* Subtle grid pattern */}
