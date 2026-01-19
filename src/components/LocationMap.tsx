@@ -29,13 +29,13 @@ const LocationMap = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-primary/30 bg-primary/5">
             <MapPin className="w-4 h-4 text-primary" />
-            <span className="text-sm text-foreground font-medium">Find Us</span>
+            <span className="text-sm text-white font-medium">Find Us</span>
           </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white">
             Located in the Heart of{" "}
             <span className="text-gradient-gold">Mthatha</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Visit our studio or call us for on-site consultations. We serve businesses 
             across South Africa with premium branding solutions.
           </p>
