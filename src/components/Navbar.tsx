@@ -110,7 +110,6 @@ const Navbar = () => {
                 src={logo}
                 alt="Ovations Logo"
                 className="h-10 md:h-12 w-auto"
-                style={{ mixBlendMode: "multiply", filter: "contrast(1.1)" }}
               />
               <span className="font-display text-lg md:text-xl font-bold text-foreground">
                 Ovations
