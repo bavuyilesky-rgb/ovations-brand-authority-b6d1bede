@@ -219,7 +219,24 @@ const Navbar = () => {
                       <a
                         key={link.label}
                         href={link.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsMobileMenuOpen(false);
+                          // Small delay to allow menu close animation
+                          setTimeout(() => {
+                            if (link.href.startsWith('/#')) {
+                              const sectionId = link.href.replace('/#', '');
+                              const element = document.getElementById(sectionId);
+                              if (element) {
+                                element.scrollIntoView({ behavior: 'smooth' });
+                              } else {
+                                window.location.href = link.href;
+                              }
+                            } else {
+                              window.location.href = link.href;
+                            }
+                          }, 100);
+                        }}
                         className="text-xl font-display font-semibold text-foreground hover:text-primary hover:bg-muted/50 transition-colors py-3 px-4 rounded-lg"
                       >
                         {link.label}
