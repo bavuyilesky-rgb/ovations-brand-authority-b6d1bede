@@ -256,10 +256,10 @@ const Services = () => {
           <span className="text-primary text-sm font-medium uppercase tracking-widest">
             Our Services
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
-            What We <span className="text-gradient-gold">Create</span> For You
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            <span className="text-white">What</span> <span className="text-white">We</span> <span className="text-gradient-gold">Create</span> <span className="text-white">For</span> <span className="text-white">You</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-white text-lg max-w-2xl mx-auto">
             Click on any service to see pricing and details.
           </p>
         </motion.div>

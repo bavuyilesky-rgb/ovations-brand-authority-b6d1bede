@@ -65,19 +65,19 @@ const SocialProof = () => {
               ))}
             </div>
             <p className="text-3xl font-display font-bold text-primary">4.3</p>
-            <p className="text-sm text-muted-foreground">Average Rating</p>
+            <p className="text-sm text-white">Average Rating</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-display font-bold text-foreground">Years</p>
-            <p className="text-sm text-muted-foreground">of Excellence</p>
+            <p className="text-3xl font-display font-bold text-white">Years</p>
+            <p className="text-sm text-white">of Excellence</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-display font-bold text-foreground">100+</p>
-            <p className="text-sm text-muted-foreground">Businesses Branded</p>
+            <p className="text-3xl font-display font-bold text-white">100+</p>
+            <p className="text-sm text-white">Businesses Branded</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-display font-bold text-foreground">Mthatha</p>
-            <p className="text-sm text-muted-foreground">Based & Proud</p>
+            <p className="text-3xl font-display font-bold text-white">Mthatha</p>
+            <p className="text-sm text-white">Based & Proud</p>
           </div>
         </motion.div>
 

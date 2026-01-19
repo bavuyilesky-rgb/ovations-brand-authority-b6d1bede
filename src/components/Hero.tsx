@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-signage.jpg";
+import heroImage from "@/assets/hero-background.png";
 import { getPhoneLink, getWhatsAppLink } from "@/lib/contact";
 
 const Hero = () => {
